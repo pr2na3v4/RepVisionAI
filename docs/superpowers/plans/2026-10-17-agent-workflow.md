@@ -1,6 +1,6 @@
 # RepVision AI Agent Workflow Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Add a low-cost, privacy-conscious, testable AI-assisted development workflow without initializing the app or implementing product features.
 
@@ -43,11 +43,11 @@
 
 **Interfaces:** Read the approved spec and relevant existing files under `RepVisionAI_Project_Docs/`. Produce a concise shared agent entry point and a concise Claude Code entry point that links to canonical rules instead of duplicating them.
 
-- [ ] **Step 1:** Draft `AGENTS.md` with project summary, links to source-of-truth docs, inspect-before-editing, planning, approval gates, verification honesty, privacy, cost, and device rules.
-- [ ] **Step 2:** Verify the current supported Claude Code instruction convention from reliable installed or official documentation.
-- [ ] **Step 3:** Draft `CLAUDE.md` as a minimal entry point to shared instructions. Do not assert unverified platform-specific behavior.
-- [ ] **Step 4:** Check links, secrets, current app status, and scope. Expected: no credentials, no claim that Expo is initialized, no edits to existing product docs.
-- [ ] **Step 5:** Commit as `docs: add shared agent instructions`.
+- [x] **Step 1:** Draft `AGENTS.md` with project summary, links to source-of-truth docs, inspect-before-editing, planning, approval gates, verification honesty, privacy, cost, and device rules.
+- [x] **Step 2:** Verify the current supported Claude Code instruction convention from reliable installed or official documentation.
+- [x] **Step 3:** Draft `CLAUDE.md` as a minimal entry point to shared instructions. Do not assert unverified platform-specific behavior.
+- [x] **Step 4:** Check links, secrets, current app status, and scope. Expected: no credentials, no claim that Expo is initialized, no edits to existing product docs.
+- [x] **Step 5:** Commit as `docs: add shared agent instructions`.
 
 ### Task 2: Document the end-to-end agent workflow
 
@@ -55,11 +55,11 @@
 
 **Interfaces:** Consumes `AGENTS.md` and the approved spec. Produces the repeatable workflow and a handoff template.
 
-- [ ] **Step 1:** Document triage/context, planning, reuse review, small implementation task, verification, independent review, physical-device validation, documentation/commit, and handoff in that order.
-- [ ] **Step 2:** Add a handoff template recording task, acceptance criteria, files changed, exact checks/results, device-test status, limitations, risks, and next step.
-- [ ] **Step 3:** Add a completion checklist requiring evidence for acceptance criteria and clear labels for checks not run.
-- [ ] **Step 4:** Verify privacy, cost, safety-language, and device-validation rules match the spec.
-- [ ] **Step 5:** Commit as `docs: define agent development workflow`.
+- [x] **Step 1:** Document triage/context, planning, reuse review, small implementation task, verification, independent review, physical-device validation, documentation/commit, and handoff in that order.
+- [x] **Step 2:** Add a handoff template recording task, acceptance criteria, files changed, exact checks/results, device-test status, limitations, risks, and next step.
+- [x] **Step 3:** Add a completion checklist requiring evidence for acceptance criteria and clear labels for checks not run.
+- [x] **Step 4:** Verify privacy, cost, safety-language, and device-validation rules match the spec.
+- [x] **Step 5:** Commit as `docs: define agent development workflow`.
 
 ### Task 3: Add planning and repository-reuse skills
 
@@ -67,49 +67,49 @@
 
 **Interfaces:** Both consume shared instructions and project docs; each skill defines purpose, triggers, required context, procedure, output, and constraints.
 
-- [ ] **Step 1:** Write `repvision-planning` to define scope, exclusions, acceptance criteria, likely files, risks, dependencies, and verification; ask one focused question when a material requirement is missing.
-- [ ] **Step 2:** Write `repvision-repo-reuse` to inspect existing code and evaluate libraries/repos for maintenance, license, compatibility, security, fit, and integration effort before rebuilding.
-- [ ] **Step 3:** Ensure planning and reuse have distinct responsibilities; never claim a candidate library solves the complete product without evidence.
-- [ ] **Step 4:** Commit as `docs: add planning and reuse skills`.
+- [x] **Step 1:** Write `repvision-planning` to define scope, exclusions, acceptance criteria, likely files, risks, dependencies, and verification; ask one focused question when a material requirement is missing.
+- [x] **Step 2:** Write `repvision-repo-reuse` to inspect existing code and evaluate libraries/repos for maintenance, license, compatibility, security, fit, and integration effort before rebuilding.
+- [x] **Step 3:** Ensure planning and reuse have distinct responsibilities; never claim a candidate library solves the complete product without evidence.
+- [x] **Step 4:** Commit as `docs: add planning and reuse skills`.
 
 ### Task 4: Add React Native and camera/ML skills
 
 **Files:** Create `.agents/skills/repvision-react-native/SKILL.md` and `.agents/skills/repvision-camera-ml/SKILL.md`.
 
-- [ ] **Step 1:** Write `repvision-react-native` to inspect actual SDK/package versions and project conventions, verify official compatibility, and minimize dependencies.
-- [ ] **Step 2:** Write `repvision-camera-ml` to separate camera lifecycle, pose inference, feature extraction, rep state machine, form assessment, and clip coordination.
-- [ ] **Step 3:** Require uncertainty for missing/unreliable landmarks, duplicate-count guards, timestamp alignment, resource cleanup, and explicit failure handling.
-- [ ] **Step 4:** State that inference frames are not playable video and device-dependent behavior remains unverified until tested on a physical Android phone.
-- [ ] **Step 5:** Commit as `docs: add React Native and camera ML skills`.
+- [x] **Step 1:** Write `repvision-react-native` to inspect actual SDK/package versions and project conventions, verify official compatibility, and minimize dependencies.
+- [x] **Step 2:** Write `repvision-camera-ml` to separate camera lifecycle, pose inference, feature extraction, rep state machine, form assessment, and clip coordination.
+- [x] **Step 3:** Require uncertainty for missing/unreliable landmarks, duplicate-count guards, timestamp alignment, resource cleanup, and explicit failure handling.
+- [x] **Step 4:** State that inference frames are not playable video and device-dependent behavior remains unverified until tested on a physical Android phone.
+- [x] **Step 5:** Commit as `docs: add React Native and camera ML skills`.
 
 ### Task 5: Add testing and code-review skills
 
 **Files:** Create `.agents/skills/repvision-testing/SKILL.md` and `.agents/skills/repvision-code-review/SKILL.md`.
 
-- [ ] **Step 1:** Write `repvision-testing` to select relevant unit, integration, UI, permission/error-state, and device checks; report exact commands and outcomes and label unavailable checks as not run.
-- [ ] **Step 2:** Write `repvision-code-review` to independently inspect correctness, types, architecture, security, privacy, performance, accessibility, dependency scope, regressions, and unsupported claims.
-- [ ] **Step 3:** Include relevant failure scenarios: permission denial, missing/unreliable landmarks, interrupted sessions/recording, storage limits, clip-save failure, and unavailable device access.
-- [ ] **Step 4:** Commit as `docs: add testing and code review skills`.
+- [x] **Step 1:** Write `repvision-testing` to select relevant unit, integration, UI, permission/error-state, and device checks; report exact commands and outcomes and label unavailable checks as not run.
+- [x] **Step 2:** Write `repvision-code-review` to independently inspect correctness, types, architecture, security, privacy, performance, accessibility, dependency scope, regressions, and unsupported claims.
+- [x] **Step 3:** Include relevant failure scenarios: permission denial, missing/unreliable landmarks, interrupted sessions/recording, storage limits, clip-save failure, and unavailable device access.
+- [x] **Step 4:** Commit as `docs: add testing and code review skills`.
 
 ### Task 6: Decide whether Claude-specific skill adapters are needed
 
 **Files:** Create `.claude/skills/<skill>/SKILL.md` only if current supported discovery rules require them; otherwise create none.
 
-- [ ] **Step 1:** Verify current official Claude Code skill-discovery rules.
-- [ ] **Step 2:** Compare the supported path and format with canonical skills under `.agents/skills/`.
-- [ ] **Step 3:** Add only minimal justified adapters; avoid divergent duplicate skill bodies.
-- [ ] **Step 4:** Record the decision in `AGENT_WORKFLOW.md`; commit any necessary update as `docs: document Claude skill adapter decision`.
+- [x] **Step 1:** Verify current official Claude Code skill-discovery rules.
+- [x] **Step 2:** Compare the supported path and format with canonical skills under `.agents/skills/`.
+- [x] **Step 3:** Add only minimal justified adapters; avoid divergent duplicate skill bodies.
+- [x] **Step 4:** Record the decision in `AGENT_WORKFLOW.md`; commit any necessary update as `docs: document Claude skill adapter decision`.
 
 ### Task 7: Cross-document acceptance review and handoff
 
 **Files:** Review all new workflow files and optional adapters. Preserve the approved spec and all files under `RepVisionAI_Project_Docs/`.
 
-- [ ] **Step 1:** Verify the six canonical skill paths exist and every skill defines purpose, triggers, inputs, procedure, output, and constraints.
-- [ ] **Step 2:** Verify shared/platform instructions are consistent and adapters are justified.
-- [ ] **Step 3:** Run available Markdown/link checks. If no tooling exists, perform targeted local checks and report what was checked rather than adding a dependency solely for this phase.
-- [ ] **Step 4:** Inspect the full diff for secrets, paid-service assumptions, unsupported compatibility claims, product-feature claims, Expo scaffolding, and edits to existing product docs.
-- [ ] **Step 5:** Map each spec acceptance criterion to evidence; document any unmet criterion honestly.
-- [ ] **Step 6:** Commit final fixes and report paths, commits, checks run, limitations, and next step.
+- [x] **Step 1:** Verify the six canonical skill paths exist and every skill defines purpose, triggers, inputs, procedure, output, and constraints.
+- [x] **Step 2:** Verify shared/platform instructions are consistent and adapters are justified.
+- [x] **Step 3:** Run available Markdown/link checks. If no tooling exists, perform targeted local checks and report what was checked rather than adding a dependency solely for this phase.
+- [x] **Step 4:** Inspect the full diff for secrets, paid-service assumptions, unsupported compatibility claims, product-feature claims, Expo scaffolding, and edits to existing product docs.
+- [x] **Step 5:** Map each spec acceptance criterion to evidence; document any unmet criterion honestly.
+- [x] **Step 6:** Commit final fixes and report paths, commits, checks run, limitations, and next step.
 
 ## Self-review
 - **Spec coverage:** Tasks 1–2 cover entry points and workflow; Tasks 3–5 cover all six skills; Task 6 verifies whether adapters are needed; Task 7 checks acceptance criteria and preservation.
@@ -117,3 +117,16 @@
 - **Type consistency:** No runtime interfaces or application types are introduced.
 - **Review Focus coverage:** Secrets and cost are checked in Tasks 1, 2, and 7; device claims and failure modes in Tasks 4, 5, and 7; platform discovery in Task 6; scope preservation in Task 7.
 - **Proportion:** The plan specifies files, boundaries, checks, and commits without pre-writing the deliverables.
+
+
+## Execution record
+
+- **Implementation branch:** `docs/agent-workflow` (kept `main` untouched).
+- **Deliverables:** `AGENTS.md`, `CLAUDE.md`, `AGENT_WORKFLOW.md`, six canonical shared skills, and six minimal Claude Code adapters.
+- **Platform decision:** Anthropic's published guidance documents `.claude/skills/<skill-name>/SKILL.md` as the project skill discovery path, so minimal adapters point to the canonical `.agents/skills/` definitions rather than duplicating their bodies.
+- **Structural checks:** Confirmed all six canonical skills and six adapters exist; all skill files have `name` and `description` YAML frontmatter; all canonical skills contain purpose/use trigger, required context, procedure, expected output, and constraints sections.
+- **Safety scan:** Scanned the three root workflow documents and six canonical skill files for common token-shaped credential patterns; none found.
+- **Preservation check:** Compared Git blob SHAs for all six files in `RepVisionAI_Project_Docs/` between `main` and `docs/agent-workflow`; all six are unchanged.
+- **Limitations:** No local checkout or shell-based Markdown linter/test suite was available in this execution environment, so no local test command was run. No app or device behavior was tested or claimed; this change is documentation-only.
+- **Execution-method limitation:** Work was committed through the connected GitHub repository interface on a dedicated branch, rather than a local git worktree. This avoided writing to `main`, but local git status and diff commands were unavailable.
+- **Final review:** Author self-review performed against the approved specification and review-focus items; no separate reviewer/subagent tool was available in this session.
