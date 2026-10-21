@@ -35,10 +35,8 @@ This file is the persistent project handoff note for developers and AI coding as
 - Check available disk space before native builds, because Android build tooling can consume significant storage.
 
 ## Current status
-**Documentation draft created.** The project has not been confirmed as initialized or run on a device. Do not mark setup or features as complete until the user verifies them.
-
+The Home → Workout Setup → Camera Instructions flow is present. Expo SDK 57.0.31 and expo-camera 57.0.6 are installed. A permission-gated camera preview and session controls (Start, Pause/Resume, Finish) are implemented for Android and Web. Pose detection, repetition counting, video recording, and saved session summaries are not implemented. TypeScript and Android/Web bundle export checks pass; the user has confirmed camera behavior works on both Android and Web.
 ## Pending decisions
-- Exact Expo SDK version produced by the project initializer.
 - Exact pose model/runtime and React Native integration strategy.
 - Camera frame-processing implementation.
 - Video rolling-buffer or recording-and-trimming implementation.
@@ -53,6 +51,13 @@ Add entries in this format:
 - Test performed:
 - Result:
 - Known issues:
+
+- Date: 2026-10-21
+- Change: Added Expo Camera preview and workout session UI for Android and Web.
+- Device/environment: Expo SDK 57.0.31; expo-camera 57.0.6; workstation bundle exports.
+- Test performed: TypeScript check and Android/Web Expo bundle exports.
+- Result: Passed. Expo Doctor and online version check could not complete because of network/TLS restrictions.
+- Known issues: Pose detection, rep counting, and recording are not included; user confirmed live camera behavior works on Android and Web.
 
 ## Instructions for future coding assistants
 - Read `prd.md`, `architecture.md`, `rules.md`, `phrases.md`, and `design.md` before making major changes.
